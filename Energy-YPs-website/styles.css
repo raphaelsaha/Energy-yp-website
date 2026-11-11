@@ -44,3 +44,8 @@ body#home{scroll-margin-top:0}
 .eyp-article .article-cta h2{margin:0 0 12px}
 .eyp-article .article-cta p{margin:0 0 22px;line-height:1.7}
 @media(max-width:760px){.eyp-article .article-meta{margin-bottom:35px}.eyp-article section{margin-top:34px}.eyp-article section p,.eyp-article li{font-size:16px}.eyp-article .article-cta{padding:22px}}
+
+/* Utrecht flexibility infographic between article sections II and III. */
+.eyp-article .article-figure{margin:42px 0 48px;padding:0}
+.eyp-article .article-figure img{display:block;width:100%;max-width:100%;height:auto;object-fit:contain;border-radius:8px}
+@media(max-width:760px){.eyp-article .article-figure{margin:30px 0 36px}}
