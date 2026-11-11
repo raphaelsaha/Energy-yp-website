@@ -28,3 +28,19 @@ header,header .brand{background:#fbf9f4}header .brand-logo{background:#fbf9f4;mi
 
 /* The home anchor is the page top, above the entire header. */
 body#home{scroll-margin-top:0}
+
+/* Editorial layout for EYP Insights articles. */
+.eyp-article{max-width:840px}
+.eyp-article h1{max-width:790px;margin-bottom:16px}
+.eyp-article .article-subtitle{color:var(--ink);font-size:clamp(19px,2.7vw,24px);line-height:1.5;margin:0 0 18px}
+.eyp-article .article-meta{font-size:14px;color:var(--green);font-weight:700;display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:0 0 48px}
+.eyp-article section{margin-top:44px}
+.eyp-article section h2{margin:0 0 22px;font-size:clamp(24px,3.4vw,32px);line-height:1.24;color:var(--ink)}
+.eyp-article section p{line-height:1.78;margin:0 0 20px;font-size:17px}
+.eyp-article section p strong,.eyp-article section li strong{color:var(--ink)}
+.eyp-article ul{margin:8px 0 24px;padding-left:25px}
+.eyp-article li{line-height:1.65;margin:9px 0;font-size:17px}
+.eyp-article .article-cta{margin-top:56px;padding:30px;background:var(--mint);border:1px solid var(--line);border-radius:12px}
+.eyp-article .article-cta h2{margin:0 0 12px}
+.eyp-article .article-cta p{margin:0 0 22px;line-height:1.7}
+@media(max-width:760px){.eyp-article .article-meta{margin-bottom:35px}.eyp-article section{margin-top:34px}.eyp-article section p,.eyp-article li{font-size:16px}.eyp-article .article-cta{padding:22px}}
