@@ -27,6 +27,36 @@
     @media (max-width: 760px) {
       .insight-entry { padding: 18px; }
     }
+    .insight-chart {
+      margin: 24px 0;
+      padding: clamp(14px, 3vw, 24px);
+      border: 1px solid var(--line, #dce7df);
+      border-radius: 12px;
+      background: var(--mint, #e9f4ed);
+    }
+    .insight-chart ul { margin: 16px 0; padding: 0; list-style: none; }
+    .insight-chart ul > li {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 4px 12px;
+      margin-bottom: 12px;
+    }
+    .insight-chart .chart-value { font-weight: 750; }
+    .insight-chart .chart-track {
+      position: relative;
+      grid-column: 1 / -1;
+      height: 10px;
+      border-radius: 5px;
+      background: #d5e5db;
+    }
+    .insight-chart .chart-bar, .insight-chart .chart-range {
+      position: absolute;
+      inset-block: 0;
+      border-radius: inherit;
+      background: #137b5a;
+    }
+    .insight-chart .chart-range { background: #153a32; }
+    #energy-insights-2 .article-cta { margin-bottom: 28px; }
   </style>
 </head>
 <body class="detail-page">
@@ -103,11 +133,147 @@
 </article>
   </details>
 
-  <details class="card insight-entry">
+  <details class="card insight-entry" id="energy-insights-2">
     <summary>Energy insights #2</summary>
-    <p>Coming soon.</p>
+    <article class="eyp-article">
+      <div class="tag">Energy YPs Insights</div>
+      <h2 class="insight-title">Norway Hit Pause: When AI Meets the Grid</h2>
+      <p class="article-subtitle">Why a 32.1 GW data-centre pipeline is forcing a rethink of how Europe connects and powers its digital infrastructure.</p>
+      <p class="article-meta"><time datetime="2026-11-17">17 November 2026</time> <span aria-hidden="true">|</span> Energy YPs Insights <span aria-hidden="true">|</span> 5-minute read</p>
+
+      <section aria-label="Introduction">
+        <p><strong>32.1 gigawatts.</strong></p>
+        <p>That is the combined capacity of Norway’s data centres already connected, the ones with capacity reserved, the projects waiting in the queue and the additional connection requests. It is larger than Norway’s national peak electricity demand of just over 25 GW.</p>
+        <p>But this doesn't mean 32.1 GW of electricity are being used today. This consists of projects at very different stages of maturity.</p>
+        <p>On 9 November 2026, transmission system operator <a href="https://www.statnett.no/om-statnett/nyheter-og-pressemeldinger/nyhetsarkiv-2026/midlertidige-tiltak-for-fortsatt-forsvarlig-systemdrift" target="_blank" rel="noopener noreferrer">Statnett temporarily suspended new grid-capacity reservations</a> for data centres, with the pause expected to end by 1 August 2027 at the latest. Existing grid connections remain unaffected.</p>
+        <p>The decision raises a wider question: what happens when digital infrastructure can grow faster than the power system can safely accommodate it?</p>
+      </section>
+
+      <section aria-labelledby="norway-connection-pipeline">
+        <h3 id="norway-connection-pipeline">I. The 32.1 GW signal: Interest is not consumption</h3>
+        <p>Norway is attractive for data centres: abundant low-carbon electricity, a cool climate and growing demand for AI computing. Yet the connection pipeline is now enormous relative to the country’s power system.</p>
+        <p>According to <a href="https://www.statnett.no/om-statnett/nyheter-og-pressemeldinger/nyhetsarkiv-2026/midlertidige-tiltak-for-fortsatt-forsvarlig-systemdrift" target="_blank" rel="noopener noreferrer">Statnett</a>, only 0.8 GW of data-centre capacity is currently connected. Another 4.2 GW has secured capacity reservations, 9.1 GW is in the connection queue and a further 18 GW has been requested.</p>
+
+      <figure class="insight-chart" aria-labelledby="norway-figure-1">
+        <figcaption id="norway-figure-1"><strong>Figure 1 – Norway’s data-centre connection pipeline</strong></figcaption>
+        <ul>
+          <li>
+            <span>Connected</span>
+            <span class="chart-value">0.8 GW</span>
+            <span class="chart-track" aria-hidden="true"><span class="chart-bar" style="left:0%;width:4%"></span></span>
+          </li>
+          <li>
+            <span>Capacity reserved</span>
+            <span class="chart-value">4.2 GW</span>
+            <span class="chart-track" aria-hidden="true"><span class="chart-bar" style="left:0%;width:21.000000000000004%"></span></span>
+          </li>
+          <li>
+            <span>In the connection queue</span>
+            <span class="chart-value">9.1 GW</span>
+            <span class="chart-track" aria-hidden="true"><span class="chart-bar" style="left:0%;width:45.49999999999999%"></span></span>
+          </li>
+          <li>
+            <span>Additional requests</span>
+            <span class="chart-value">18 GW</span>
+            <span class="chart-track" aria-hidden="true"><span class="chart-bar" style="left:0%;width:90%"></span></span>
+          </li>
+        </ul>
+        <small>Source: <a href="https://www.statnett.no/om-statnett/nyheter-og-pressemeldinger/nyhetsarkiv-2026/midlertidige-tiltak-for-fortsatt-forsvarlig-systemdrift" target="_blank" rel="noopener noreferrer">Statnett</a>.</small>
+      </figure>
+        <p>Adding these figures gives 32.1 GW of connection-related signals, not a forecast of delivered demand. Some projects may be delayed, resized or never built.</p>
+        <p>That distinction matters. Reserved capacity does not necessarily mean a fully operational facility, and a connection request does not mean the required electricity infrastructure has already been constructed.</p>
+        <p>The extraordinary size of the pipeline shows how important electricity access has become in deciding where digital infrastructure can be developed.</p>
+      </section>
+
+      <section aria-labelledby="norway-grid-operation">
+        <h3 id="norway-grid-operation">II. Why the challenge is more than a lack of megawatts</h3>
+        <p>For electricity grids, capacity is only part of the story.</p>
+        <p>Large data centres can change consumption quickly. Their loads are strongly software-controlled, and their power-electronic systems may react differently to grid disturbances than traditional industry.</p>
+        <p>Statnett is concerned with the operational consequences of connecting these facilities at scale, not simply the number of megawatts on paper.</p>
+        <p>Its proposed technical work focuses on three concrete questions: when must a facility remain connected during a grid fault, how quickly may its demand rise or fall, and how can equipment avoid contributing to power-system oscillations?</p>
+        <p>The requirements will be subject to consultation and regulatory approval.</p>
+        <p>Norway is also considering a separate <a href="https://www.regjeringen.no/en/whats-new/government-seeks-controlled-growth-of-data-centres-in-norway/id3192054/" target="_blank" rel="noopener noreferrer">licensing regime for data centres</a>. The government wants to weigh digital resilience, economic value, electricity availability and public benefit when deciding which facilities should expand. The main principles are planned for autumn 2027.</p>
+        <p>The economic trade-off is tangible.</p>
+        <p><a href="https://menon.no/en/news/economic-aspects-of-the-norwegian-data-centre-industry" target="_blank" rel="noopener noreferrer">Research for the Norwegian government</a> estimates that data centres consumed 3.2 TWh in 2025, around 2.3% of national electricity demand, while supporting approximately 1,800 full-time-equivalent jobs and NOK 4.3 billion of value added when the supply chain is included.</p>
+        <p>These benefits matter, but they do not make grid capacity unlimited.</p>
+      </section>
+
+      <section aria-labelledby="norway-grid-participation">
+        <h3 id="norway-grid-participation">III. From connection queues to smarter grid participation</h3>
+        <p>Europe’s challenge is not to choose between AI and the energy transition. It is to design credible access rules for industries that require large, rapid and reliable electricity connections.</p>
+        <p>How much new demand will materialise is uncertain. <a href="https://menon.no/en/news/economic-aspects-of-the-norwegian-data-centre-industry" target="_blank" rel="noopener noreferrer">Menon Economics’ illustrative 2035 scenarios</a> span 17–37 TWh of annual data-centre consumption, compared with 3.2 TWh in 2025.</p>
+
+      <figure class="insight-chart" aria-labelledby="norway-figure-2">
+        <figcaption id="norway-figure-2"><strong>Figure 2 – Norwegian data-centre electricity use: 2025 actual and 2035 scenarios</strong></figcaption>
+        <ul>
+          <li>
+            <span>2025 actual</span>
+            <span class="chart-value">3.2 TWh</span>
+            <span class="chart-track" aria-hidden="true"><span class="chart-bar" style="left:0%;width:8%"></span></span>
+          </li>
+          <li>
+            <span>2035 scenarios</span>
+            <span class="chart-value">17–37 TWh</span>
+            <span class="chart-track" aria-hidden="true"><span class="chart-range" style="left:42.5%;width:50%"></span></span>
+          </li>
+        </ul>
+        <small>Source: <a href="https://menon.no/en/news/economic-aspects-of-the-norwegian-data-centre-industry" target="_blank" rel="noopener noreferrer">Menon Economics</a>.</small>
+      </figure>
+        <p>The scenarios illustrate the scale of the choices ahead, not a definitive forecast.</p>
+        <p>Three practical priorities stand out:</p>
+        <ol>
+          <li>
+            <strong>Connect in stages, not just in blocks.</strong>
+            <p>Network operators and developers could agree on staged energisation, realistic ramp-up profiles and clearer milestones, so unused speculative capacity is less likely to constrain mature projects.</p>
+          </li>
+          <li>
+            <strong>Reward useful flexibility where it exists.</strong>
+            <p>Non-time-critical computing tasks may sometimes be shifted in time or between locations. Batteries and on-site backup systems might also help, subject to reliability, emissions and commercial constraints.</p>
+            <p>Not all AI workloads can be interrupted, and flexibility that supports national balancing is not automatically helpful for local congestion.</p>
+          </li>
+          <li>
+            <strong>Make the economics transparent.</strong>
+            <p>Connection rights and grid expansion costs should reflect project maturity, network impact and public value. Norway is explicitly considering a larger cost contribution from major new electricity consumers.</p>
+          </li>
+        </ol>
+        <p>The global direction of travel makes this debate urgent.</p>
+        <p>The <a href="https://www.iea.org/reports/energy-and-ai/executive-summary" target="_blank" rel="noopener noreferrer">International Energy Agency</a> estimated 415 TWh of electricity use by data centres in 2024 and projects approximately 945 TWh by 2030 in its base case.</p>
+        <p>A world with more AI infrastructure needs more electricity, but also better grid planning, technical standards and flexibility markets.</p>
+      </section>
+
+      <section aria-labelledby="norway-bigger-question">
+        <h3 id="norway-bigger-question">The bigger question</h3>
+        <p>Norway’s pause is not an argument against AI. It is a reminder that digital infrastructure is becoming part of the physical electricity system.</p>
+        <p>How should Europe allocate scarce grid capacity – and what should large new electricity consumers contribute in return for reliable access?</p>
+        <p>The next phase of AI growth may be determined as much by grid engineering and market design as by the performance of the chips inside the data centres.</p>
+      </section>
+
+      <aside class="article-cta" aria-label="Join the conversation">
+        <h3>Join the conversation</h3>
+        <p>Energy Young Professionals (EYP) brings together young professionals across energy, sustainability and mobility to exchange perspectives on the energy transition.</p>
+        <p>Join the conversation and help explore what a flexible, reliable digital energy system should look like.</p>
+        <a class="button" href="https://energyyoungprofessionals.org">Visit Energy Young Professionals</a>
+      </aside>
+
+      <section aria-labelledby="norway-sources">
+        <h3 id="norway-sources">Sources and methodology</h3>
+        <p>Figures reflect sources available as of 17 November 2026. The 32.1 GW total comprises distinct project stages, not actual operating demand.</p>
+        <ol>
+          <li>Statnett (9 November 2026). <a href="https://www.statnett.no/om-statnett/nyheter-og-pressemeldinger/nyhetsarkiv-2026/midlertidige-tiltak-for-fortsatt-forsvarlig-systemdrift" target="_blank" rel="noopener noreferrer">Temporary measures for responsible system operation</a>.</li>
+          <li>Government of Norway (10 November 2026). <a href="https://www.regjeringen.no/en/whats-new/government-seeks-controlled-growth-of-data-centres-in-norway/id3192054/" target="_blank" rel="noopener noreferrer">Government seeks controlled growth of data centres in Norway</a>.</li>
+          <li>Menon Economics (5 November 2026). <a href="https://menon.no/en/news/economic-aspects-of-the-norwegian-data-centre-industry" target="_blank" rel="noopener noreferrer">Economic aspects of the Norwegian data centre industry</a>.</li>
+          <li>NVE (26 August 2026). <a href="https://www.nve.no/energi/energisystem/energibruk/energibruk-i-datasenter/" target="_blank" rel="noopener noreferrer">Energy use in data centres</a>.</li>
+          <li>International Energy Agency (2025). <a href="https://www.iea.org/reports/energy-and-ai/executive-summary" target="_blank" rel="noopener noreferrer">Energy and AI – Executive summary</a>.</li>
+        </ol>
+      </section>
+    </article>
   </details>
 </main>
 <footer class="foot"><div class="inner"><strong>Energy Young Professionals – Amsterdam</strong><span>© <span id="year">2026</span> Energy YPs – <a href="index.html#home">Back to top ↑</a></span></div></footer><script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+<script>
+  if (location.hash === '#energy-insights-2') {
+    document.getElementById('energy-insights-2').open = true;
+  }
+</script>
 </body>
 </html>
