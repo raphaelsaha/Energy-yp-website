@@ -28,34 +28,7 @@
     @media (max-width: 760px) {
       .insight-entry { padding: 18px; }
     }
-    .eyp-article .insight-chart {
-      padding: clamp(14px, 3vw, 24px);
-      border: 1px solid var(--line, #dce7df);
-      border-radius: 12px;
-      background: var(--mint, #e9f4ed);
-    }
-    .insight-chart ul { margin: 16px 0; padding: 0; list-style: none; }
-    .insight-chart ul > li {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 4px 12px;
-      margin-bottom: 12px;
-    }
-    .insight-chart .chart-value { font-weight: 750; }
-    .insight-chart .chart-track {
-      position: relative;
-      grid-column: 1 / -1;
-      height: 10px;
-      border-radius: 5px;
-      background: #d5e5db;
-    }
-    .insight-chart .chart-bar, .insight-chart .chart-range {
-      position: absolute;
-      inset-block: 0;
-      border-radius: inherit;
-      background: #137b5a;
-    }
-    .insight-chart .chart-range { background: #153a32; }
+    #energy-insights-2 .article-figure figcaption { margin-bottom: 12px; }
     #energy-insights-2 .article-cta { margin-bottom: 28px; }
   </style>
 </head>
@@ -151,32 +124,11 @@
         <p>Norway is attractive for data centres: abundant low-carbon electricity, a cool climate and growing demand for AI computing. Yet the connection pipeline is now enormous relative to the country’s power system.</p>
         <p>According to <a href="https://www.statnett.no/om-statnett/nyheter-og-pressemeldinger/nyhetsarkiv-2026/midlertidige-tiltak-for-fortsatt-forsvarlig-systemdrift" target="_blank" rel="noopener noreferrer">Statnett</a>, only 0.8 GW of data-centre capacity is currently connected. Another 4.2 GW has secured capacity reservations, 9.1 GW is in the connection queue and a further 18 GW has been requested.</p>
 
-      <figure class="article-figure insight-chart" aria-labelledby="norway-figure-1">
-        <figcaption id="norway-figure-1"><strong>Figure 1 – Norway’s data-centre connection pipeline</strong></figcaption>
-        <ul>
-          <li>
-            <span>Connected</span>
-            <span class="chart-value">0.8 GW</span>
-            <span class="chart-track" aria-hidden="true"><span class="chart-bar" style="left:0%;width:4%"></span></span>
-          </li>
-          <li>
-            <span>Capacity reserved</span>
-            <span class="chart-value">4.2 GW</span>
-            <span class="chart-track" aria-hidden="true"><span class="chart-bar" style="left:0%;width:21.000000000000004%"></span></span>
-          </li>
-          <li>
-            <span>In the connection queue</span>
-            <span class="chart-value">9.1 GW</span>
-            <span class="chart-track" aria-hidden="true"><span class="chart-bar" style="left:0%;width:45.49999999999999%"></span></span>
-          </li>
-          <li>
-            <span>Additional requests</span>
-            <span class="chart-value">18 GW</span>
-            <span class="chart-track" aria-hidden="true"><span class="chart-bar" style="left:0%;width:90%"></span></span>
-          </li>
-        </ul>
-        <small>Source: <a href="https://www.statnett.no/om-statnett/nyheter-og-pressemeldinger/nyhetsarkiv-2026/midlertidige-tiltak-for-fortsatt-forsvarlig-systemdrift" target="_blank" rel="noopener noreferrer">Statnett</a>.</small>
-      </figure>
+        <figure class="article-figure" aria-labelledby="norway-figure-1">
+          <figcaption id="norway-figure-1"><strong>Figure 1 – Norway’s data-centre connection pipeline</strong></figcaption>
+          <img src="insights-2-figure-1.png" alt="Horizontal bar chart of Norway’s data-centre grid pipeline: 0.8 GW already connected, 4.2 GW reserved, 9.1 GW in the capacity queue and 18.0 GW in further requests." width="1359" height="557" loading="lazy" decoding="async">
+          <small>Source: <a href="https://www.statnett.no/om-statnett/nyheter-og-pressemeldinger/nyhetsarkiv-2026/midlertidige-tiltak-for-fortsatt-forsvarlig-systemdrift" target="_blank" rel="noopener noreferrer">Statnett</a>.</small>
+        </figure>
         <p>Adding these figures gives 32.1 GW of connection-related signals, not a forecast of delivered demand. Some projects may be delayed, resized or never built.</p>
         <p>That distinction matters. Reserved capacity does not necessarily mean a fully operational facility, and a connection request does not mean the required electricity infrastructure has already been constructed.</p>
         <p>The extraordinary size of the pipeline shows how important electricity access has become in deciding where digital infrastructure can be developed.</p>
@@ -200,22 +152,11 @@
         <p>Europe’s challenge is not to choose between AI and the energy transition. It is to design credible access rules for industries that require large, rapid and reliable electricity connections.</p>
         <p>How much new demand will materialise is uncertain. <a href="https://menon.no/en/news/economic-aspects-of-the-norwegian-data-centre-industry" target="_blank" rel="noopener noreferrer">Menon Economics’ illustrative 2035 scenarios</a> span 17–37 TWh of annual data-centre consumption, compared with 3.2 TWh in 2025.</p>
 
-      <figure class="article-figure insight-chart" aria-labelledby="norway-figure-2">
-        <figcaption id="norway-figure-2"><strong>Figure 2 – Norwegian data-centre electricity use: 2025 actual and 2035 scenarios</strong></figcaption>
-        <ul>
-          <li>
-            <span>2025 actual</span>
-            <span class="chart-value">3.2 TWh</span>
-            <span class="chart-track" aria-hidden="true"><span class="chart-bar" style="left:0%;width:8%"></span></span>
-          </li>
-          <li>
-            <span>2035 scenarios</span>
-            <span class="chart-value">17–37 TWh</span>
-            <span class="chart-track" aria-hidden="true"><span class="chart-range" style="left:42.5%;width:50%"></span></span>
-          </li>
-        </ul>
-        <small>Source: <a href="https://menon.no/en/news/economic-aspects-of-the-norwegian-data-centre-industry" target="_blank" rel="noopener noreferrer">Menon Economics</a>.</small>
-      </figure>
+        <figure class="article-figure" aria-labelledby="norway-figure-2">
+          <figcaption id="norway-figure-2"><strong>Figure 2 – Norwegian data-centre electricity use: 2025 actual and 2035 scenarios</strong></figcaption>
+          <img src="insights-2-figure-2.png" alt="Horizontal bar chart of Norwegian data-centre electricity use: 3.2 TWh in 2025, versus 17 TWh in the 2035 low case and 37 TWh in the 2035 high case." width="1359" height="463" loading="lazy" decoding="async">
+          <small>Source: <a href="https://menon.no/en/news/economic-aspects-of-the-norwegian-data-centre-industry" target="_blank" rel="noopener noreferrer">Menon Economics</a>.</small>
+        </figure>
         <p>The scenarios illustrate the scale of the choices ahead, not a definitive forecast.</p>
         <p>Three practical priorities stand out:</p>
         <ol>
